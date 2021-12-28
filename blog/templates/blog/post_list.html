@@ -25,5 +25,14 @@
             <time>published: 15.12.2021, 09:45</time>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
         </article>
+        {{% for post in posts %}
+            <article>
+                <br>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <time>published: {{ post.published_date }}</time>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+        
     </body>
 </html>
